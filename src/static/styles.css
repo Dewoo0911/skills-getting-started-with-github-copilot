@@ -162,8 +162,8 @@ footer {
 
 /* Bulleted list styling but nicer spacing and alignment */
 .participants ul {
-  list-style: disc;
-  padding-left: 22px;
+  list-style: none;
+  padding-left: 0;
   margin: 0;
 }
 
@@ -171,9 +171,33 @@ footer {
   margin-bottom: 8px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 10px;
   color: #333;
   font-size: 15px;
+}
+
+/* Container to keep avatar and name grouped */
+.participant-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  overflow: hidden;
+  flex: 1 1 auto;
+}
+
+/* Small delete button / icon */
+.delete-btn {
+  background: transparent;
+  border: none;
+  color: #c62828;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 6px 8px;
+  border-radius: 4px;
+}
+.delete-btn:hover {
+  background-color: rgba(198, 40, 40, 0.08);
 }
 
 /* Small circular avatar with initials */
