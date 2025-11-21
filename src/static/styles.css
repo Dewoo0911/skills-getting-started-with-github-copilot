@@ -142,3 +142,73 @@ footer {
   padding: 20px;
   color: #666;
 }
+
+/* Participants section inside activity cards */
+.participants {
+  margin-top: 12px;
+  padding: 10px;
+  border-radius: 6px;
+  background: linear-gradient(180deg, rgba(26,35,126,0.03), rgba(26,35,126,0.01));
+  border: 1px solid rgba(26,35,126,0.06);
+}
+
+.participants h5 {
+  margin: 0 0 8px 0;
+  padding: 0;
+  font-size: 14px;
+  color: #1a237e;
+  font-weight: 600;
+}
+
+/* Bulleted list styling but nicer spacing and alignment */
+.participants ul {
+  list-style: disc;
+  padding-left: 22px;
+  margin: 0;
+}
+
+.participants li {
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #333;
+  font-size: 15px;
+}
+
+/* Small circular avatar with initials */
+.participants .avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: #1a237e;
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 600;
+  flex: 0 0 32px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.08);
+}
+
+/* Participant name should truncate if long */
+.participants .name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Slightly reduce spacing on small screens */
+@media (max-width: 480px) {
+  .participants .avatar {
+    width: 28px;
+    height: 28px;
+    font-size: 12px;
+    flex: 0 0 28px;
+  }
+  .participants li {
+    font-size: 14px;
+    gap: 8px;
+  }
+}
